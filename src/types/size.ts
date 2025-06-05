@@ -1,4 +1,4 @@
-import {CssLength} from "@/types/length";
+import { CssLength } from "@/types/length";
 
 export type CSSSizeKeyword =
   | "auto"

@@ -1,3 +1,3 @@
-import { Length } from "@/types/length";
+import { CssLength } from "@/types/length";
 
-export type Spacing = Length | "auto";
+export type CssSpacing = CssLength | "auto";

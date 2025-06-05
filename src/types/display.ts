@@ -1,44 +1,46 @@
 // https://developer.mozilla.org/en-US/docs/Web/CSS/display
 
 export type CssDisplayPrecomposedValues =
-    "block" |
-    "inline" |
-    "inline-block" |
-    "flex" |
-    "inline-flex" |
-    "grid" |
-    "inline-grid" |
-    "flow-root";
+  | "block"
+  | "inline"
+  | "inline-block"
+  | "flex"
+  | "inline-flex"
+  | "grid"
+  | "inline-grid"
+  | "flow-root";
 
-export type CssDisplayBoxGeneration =
-    "none" |
-    "contents";
+export type CssDisplayBoxGeneration = "none" | "contents";
 
 export type CssDisplayMultiKeywordSyntax =
-    "block flex" |
-    "block flow" |
-    "block flow-root" |
-    "block grid" |
-    "inline flex" |
-    "inline flow" |
-    "inline flow-root" |
-    "inline grid";
+  | "block flex"
+  | "block flow"
+  | "block flow-root"
+  | "block grid"
+  | "inline flex"
+  | "inline flow"
+  | "inline flow-root"
+  | "inline grid";
 
-export type CssDisplayOtherValues =
-    "table" |
-    "table-row" |
-    "list-item";
+export type CssDisplayOtherValues = "table" | "table-row" | "list-item";
 
 export type CssDisplayGlobalValues =
-    "inherit" |
-    "initial" |
-    "revert" |
-    "revert-layer" |
-    "unset";
+  | "inherit"
+  | "initial"
+  | "revert"
+  | "revert-layer"
+  | "unset";
 
-export type CssDisplay = CssDisplayPrecomposedValues | CssDisplayBoxGeneration | CssDisplayMultiKeywordSyntax | CssDisplayOtherValues | CssDisplayGlobalValues;
+export type CssDisplay =
+  | CssDisplayPrecomposedValues
+  | CssDisplayBoxGeneration
+  | CssDisplayMultiKeywordSyntax
+  | CssDisplayOtherValues
+  | CssDisplayGlobalValues;
 
-export function isCssDisplayPrecomposedValues(value: any): value is CssDisplayPrecomposedValues {
+export function isCssDisplayPrecomposedValues(
+  value: any,
+): value is CssDisplayPrecomposedValues {
   if (typeof value !== "string") return false;
 
   return (
@@ -53,16 +55,17 @@ export function isCssDisplayPrecomposedValues(value: any): value is CssDisplayPr
   );
 }
 
-export function isCssDisplayBoxGeneration(value: any): value is CssDisplayBoxGeneration {
+export function isCssDisplayBoxGeneration(
+  value: any,
+): value is CssDisplayBoxGeneration {
   if (typeof value !== "string") return false;
 
-  return (
-    value === "none" ||
-    value === "contents"
-  );
+  return value === "none" || value === "contents";
 }
 
-export function isCssDisplayMultiKeywordSyntax(value: any): value is CssDisplayMultiKeywordSyntax {
+export function isCssDisplayMultiKeywordSyntax(
+  value: any,
+): value is CssDisplayMultiKeywordSyntax {
   if (typeof value !== "string") return false;
 
   return (
@@ -77,17 +80,17 @@ export function isCssDisplayMultiKeywordSyntax(value: any): value is CssDisplayM
   );
 }
 
-export function isCssDisplayOtherValues(value: any): value is CssDisplayOtherValues {
+export function isCssDisplayOtherValues(
+  value: any,
+): value is CssDisplayOtherValues {
   if (typeof value !== "string") return false;
 
-  return (
-    value === "table" ||
-    value === "table-row" ||
-    value === "list-item"
-  );
+  return value === "table" || value === "table-row" || value === "list-item";
 }
 
-export function isCssDisplayGlobalValues(value: any): value is CssDisplayGlobalValues {
+export function isCssDisplayGlobalValues(
+  value: any,
+): value is CssDisplayGlobalValues {
   if (typeof value !== "string") return false;
 
   return (

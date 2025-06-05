@@ -8,7 +8,7 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig([
     {
-        name: '@luwio/template',
+        name: '@tacky-org/tacky-css',
         dts: true, // Generate .d.ts files
         minify: false, // Minify output
         minifyWhitespace: false,

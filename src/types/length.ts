@@ -1,4 +1,4 @@
-import {CSSUnit} from "@/types/unit";
+import { CSSUnit } from "@/types/unit";
 
 export type CssLength = "0" | `${number}${CSSUnit}`;
 

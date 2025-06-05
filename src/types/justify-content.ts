@@ -1,33 +1,33 @@
 // https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
 export type CssJustifyContent =
-    /* Positional alignment */
-    | "center"
-    | "start"
-    | "end"
-    | "flex-start"
-    | "flex-end"
-    | "left"
-    | "right"
+  /* Positional alignment */
+  | "center"
+  | "start"
+  | "end"
+  | "flex-start"
+  | "flex-end"
+  | "left"
+  | "right"
 
-    /* Normal alignment */
-    | "normal"
+  /* Normal alignment */
+  | "normal"
 
-    /* Distributed alignment */
-    | "space-between"
-    | "space-around"
-    | "space-evenly"
-    | "stretch"
+  /* Distributed alignment */
+  | "space-between"
+  | "space-around"
+  | "space-evenly"
+  | "stretch"
 
-    /* Overflow alignment */
-    | "safe center"
-    | "unsafe center"
+  /* Overflow alignment */
+  | "safe center"
+  | "unsafe center"
 
-    /* Global values */
-    | "inherit"
-    | "initial"
-    | "revert"
-    | "revert-layer"
-    | "unset";
+  /* Global values */
+  | "inherit"
+  | "initial"
+  | "revert"
+  | "revert-layer"
+  | "unset";
 
 export function isCssJustifyContent(value: any): value is CssJustifyContent {
   if (typeof value !== "string") return false;
@@ -41,20 +41,16 @@ export function isCssJustifyContent(value: any): value is CssJustifyContent {
     value === "flex-end" ||
     value === "left" ||
     value === "right" ||
-
     /* Normal alignment */
     value === "normal" ||
-
     /* Distributed alignment */
     value === "space-between" ||
     value === "space-around" ||
     value === "space-evenly" ||
     value === "stretch" ||
-
     /* Overflow alignment */
     value === "safe center" ||
     value === "unsafe center" ||
-
     /* Global values */
     value === "inherit" ||
     value === "initial" ||
